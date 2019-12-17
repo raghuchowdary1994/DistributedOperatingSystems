@@ -1,0 +1,75 @@
+<form id="rendered-form">
+
+  <div class="rendered-form">
+    <div style = "display:block" id= "hideuserdata">
+    <div class=""><h1 id="control-192336">Twitter Simulator</h1></div>
+    <div id="onlinefeed" style =" border: 1px solid; padding: 0 0 0 5px; min-height: 250px; max-height: 300px; overflow: scroll" ></div>
+    <div id="username"> </div>
+    <div class="fb-text form-group field-text-1575860989485">
+
+      <label for="text-1575860989485" class="fb-text-label">User Name</label>
+      <input type="text" class="form-control" name="text-1575860989485" id="fname"></div>
+      <div class="fb-button form-group field-button-1575861129125">
+        <button type="button" class="btn-default btn" name="button-1575861129125" style="default" id="register">
+          Register</button>
+        </div>
+        <div class="fb-button form-group field-button-1575860980530">
+          <button type="button" class="btn-default btn" name="button-1575860980530" style="default" id="login">
+            Login</button>
+          </div>
+        </div>
+
+        <div style="display : none" id = "afterLogin">
+
+          <div class="fb-text form-group field-text-1575861792425">
+            <label for="text-1575861792425" class="fb-text-label">Post Tweet</label>
+            <input type="text" class="form-control" name="text-1575861792425" id="tweet">
+          </div>
+          <div class="fb-button form-group field-button-1575861812390">
+            <button type="button" class="btn-default btn" name="button-1575861812390" style="default" id="sendTweet">
+              Tweet
+            </button>
+          </div>
+          <div class="fb-text form-group field-text-1575861852250">
+            <label for="text-1575861852250" class="fb-text-label">Follow User</label>
+            <input type="text" class="form-control" name="text-1575861852250" id="followuser">
+          </div>
+          <div class="fb-button form-group field-button-1575861869025">
+            <button type="button" class="btn-default btn" name="button-1575861869025" style="default" id="follow">Follow</button>
+          </div>
+
+          
+          <div class="fb-text form-group field-text-1576127208630">
+          <label for="text-1576127208630" class="fb-text-label">Retweet ID Input</label>
+          <input type="text" class="form-control" name="text-1576127208630" id="retweetid">
+          </div>
+          <div class="fb-button form-group field-button-1576127236916">
+          <button type="button" class="btn-default btn" name="button-1576127236916" style="default" id="send_retweet">Retweet</button>
+          </div>
+          
+
+
+
+
+          <div class="fb-text form-group field-text-1575861921433">
+            <label for="text-1575861921433" class="fb-text-label">Query Mentions</label>
+            <input type="text" class="form-control" name="text-1575861921433" id="mention">
+          </div>
+          <div class="fb-button form-group field-button-1575861940157">
+            <button type="button" class="btn-default btn" name="button-1575861940157" style="default" id="queryMentions">Query Mentions</button>
+          </div>
+          <li style ="display : none" id="mentionsList"></li>
+
+          <div class="fb-text form-group field-text-1575861960672">
+            <label for="text-1575861960672" class="fb-text-label">Query HashTags</label>
+            <input type="text" class="form-control" name="text-1575861960672" id="hashtag">
+          </div>
+          <div class="fb-button form-group field-button-1575861976855">
+            <button type="button" class="btn-default btn" name="button-1575861976855" style="default" id="queryHashtags">Query HashTags</button>
+          </div>
+
+          <li style ="display : none"  id="hashtagsList"></li>
+
+        </div>
+      </div>
+      </form>

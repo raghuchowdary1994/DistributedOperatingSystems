@@ -1,0 +1,19 @@
+defmodule Torus3D do
+ def threeDTorus(list) do
+  numofNodes = length(list)
+  rowNodeCount = round(Float.ceil(:math.pow(numofNodes,(1/3))))
+  #plainNodeCount = round(Float.ceil(:math.pow(numofNodes,(2/3)))
+  plainNodeCount = round(:math.pow(rowNodeCount,2))
+
+  Enum.map(1..numofNodes, fn x->
+   positiveX = if(x+1 <= numofNodes && rem(x,rowNodeCount) != 0 ) do x+1 else x-rowNodeCount+1 end
+   negativeX = if(x-1 >= 1 && rem(x-1,rowNodeCount) != 0) do x-1 else x+rowNodeCount-1 end
+   positiveY = if(rem(x,plainNodeCount) != 0 && plainNodeCount - rowNodeCount >= rem(x,(plainNodeCount))) do x+ rowNodeCount else x-plainNodeCount+rowNodeCount end
+   negativeY = if((plainNodeCount - rowNodeCount*(rowNodeCount-1)) < rem(x-1,(plainNodeCount)) + 1) do x- rowNodeCount else x+plainNodeCount-rowNodeCount end
+   positiveZ = if(x+ plainNodeCount <= numofNodes) do x+ plainNodeCount else x - plainNodeCount*(rowNodeCount-1) end
+   negativeZ = if(x- plainNodeCount >= 1) do x- plainNodeCount else x + plainNodeCount*(rowNodeCount-1) end
+  neighbour = [positiveX,negativeX,positiveY,negativeY,positiveZ,negativeZ]
+  some=Enum.reject(neighbour,&is_nil/1)
+  end)
+ end
+end

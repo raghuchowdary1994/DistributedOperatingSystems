@@ -1,0 +1,83 @@
+Building followers, taking 30% random followers for each User
+.Building followers, taking 30% random followers for each User
+...Building followers, taking 30% random followers for each User
+$user1 tweeting with hashTags and mentions @user2  #hashTag2
+$ user3 received the tweet  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2  from user1
+$ user5 received the tweet  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2  from user1
+user3 back online
+Tweet feed for user3 : No new Tweets
+user5 back online
+Tweet feed for user5 : No new Tweets
+.Building followers, taking 30% random followers for each User
+$user6 tweeting with hashTags and mentions @user1  #hashTag3
+user3 back online
+ Tweet feed for user3:  6 : $user6 tweeting with hashTags and mentions @user1  #hashTag3
+user7 back online
+ Tweet feed for user7:  6 : $user6 tweeting with hashTags and mentions @user1  #hashTag3
+user4 back online
+ Tweet feed for user4:  6 : $user6 tweeting with hashTags and mentions @user1  #hashTag3
+user10 back online
+ Tweet feed for user10:  6 : $user6 tweeting with hashTags and mentions @user1  #hashTag3
+
+
+  1) test Test send tweet 2 case (TwitterEngineTest)
+     test/twitterengine_test.exs:87
+     Assertion with == failed
+     code:  assert Enum.empty?(list) == false
+     left:  true
+     right: false
+     stacktrace:
+       test/twitterengine_test.exs:108: (test)
+
+Building followers, taking 30% random followers for each User
+$user1 tweeting with hashTags and mentions @user5  #hashTag4
+$ user5 received the tweet  1 : $user1 tweeting with hashTags and mentions @user5  #hashTag4  from user1
+$ user3 received the tweet  1 : $user1 tweeting with hashTags and mentions @user5  #hashTag4  from user1
+ user1 has query for #hashTag4 
+#hashTag4 queried by user1:  1 : $user1 tweeting with hashTags and mentions @user5  #hashTag4
+.Building followers, taking 30% random followers for each User
+$user3 tweeting with hashTags and mentions @user1  #hashTag2
+$ user2 received the tweet  3 : $user3 tweeting with hashTags and mentions @user1  #hashTag2  from user3
+ user3 has query for #hashTag2 
+#hashTag2 queried by user3:  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2
+#hashTag2 queried by user3:  3 : $user3 tweeting with hashTags and mentions @user1  #hashTag2
+.Building followers, taking 30% random followers for each User
+$user1 tweeting with hashTags and mentions @user3  #hashTag5
+$ user5 received the tweet  1 : $user1 tweeting with hashTags and mentions @user3  #hashTag5  from user1
+ user1 has query for @user3 
+@user3 queried by user1:  1 : $user1 tweeting with hashTags and mentions @user3  #hashTag5
+.Building followers, taking 30% random followers for each User
+user2 back online
+Tweet feed for user2 : No new Tweets
+.Building followers, taking 30% random followers for each User
+user2 went offline
+..Building followers, taking 30% random followers for each User
+$user1 tweeting with hashTags and mentions @user2  #hashTag2
+$ user2 received the tweet  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2  from user1
+$ user3 received the tweet  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2  from user1
+user2 back online
+Tweet feed for user2 : No new Tweets
+Retweeting :  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2
+$ user4 received the tweet  2 :  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2  from user2
+$ user3 received the tweet  2 :  1 : $user1 tweeting with hashTags and mentions @user2  #hashTag2  from user2
+user4 back online
+Tweet feed for user4 : No new Tweets
+user3 back online
+Tweet feed for user3 : No new Tweets
+.Building followers, taking 30% random followers for each User
+user2 went offline
+$user1 tweeting with hashTags and mentions @user4  #hashTag2
+$user3 tweeting with hashTags and mentions @user4  #hashTag4
+$user4 tweeting with hashTags and mentions @user3  #hashTag3
+$user5 tweeting with hashTags and mentions @user4  #hashTag2
+$ user4 received the tweet  1 : $user1 tweeting with hashTags and mentions @user4  #hashTag2  from user1
+$ user5 received the tweet  1 : $user1 tweeting with hashTags and mentions @user4  #hashTag2  from user1
+$ user5 received the tweet  3 : $user3 tweeting with hashTags and mentions @user4  #hashTag4  from user3
+user2 back online
+ Tweet feed for user2:  3 : $user3 tweeting with hashTags and mentions @user4  #hashTag4 5 : $user5 tweeting with hashTags and mentions @user4  #hashTag2
+.
+
+Finished in 16.9 seconds
+14 tests, 1 failure
+
+Randomized with seed 0
